@@ -1,16 +1,21 @@
 <template>
-  <div class="md-wrapper" ref="wrapper">
-    <div class="md-container" @scroll="handleScroll">
+  <div class="flex min-w-0 flex-1" ref="wrapper">
+    <div class="order-1 mx-auto min-w-0 max-w-[800px] flex-1" @scroll="handleScroll">
       <div class="md-head" ref="mdHead">
-        <h1 class="md-title">{{attributes.title}}</h1>
-        <img ref="img" v-if="attributes && attributes.coverImg" :src="attributes.coverImg" :alt="attributes.title" class="cover-img"/>
+        <h1 class="mt-2
+                    text-3xl
+                    leading-8
+                    font-extrabold
+                    tracking-tight
+                    text-gray-900
+                    sm:text-4xl">{{attributes.title}}</h1>
+        <img ref="img" v-if="attributes && attributes.coverImg" :src="attributes.coverImg" :alt="attributes.title" class="object-cover h-48"/>
       </div>
-      <article class="md-body" v-html="content"></article>
+      <article class="prose prose-neutral  prose-a:text-indigo-600 hover:prose-a:text-indigo-400" v-html="content"></article>
     </div>
-    <div class="anchor-content">
-      <div class="sticky-box">
-        <h4 class="top-title">目录</h4>
-        <div class="anchor-box">
+    <div class="z-10 order-2 hidden w-64 min-w-0 shrink-0 xl:block xl:pl-8">
+      <div class="sticky top-[80px] pt-1 max-h-screen overflow-y-auto">
+        <div class="anchor-box font-sans text-sm">
           <div
           class="anchor-item"
           v-for="(item, index) in toc"
