@@ -14,7 +14,7 @@
       <article class="prose prose-neutral  prose-a:text-indigo-600 hover:prose-a:text-indigo-400" v-html="content"></article>
     </div>
     <div class="z-10 order-2 hidden w-64 min-w-0 shrink-0 xl:block xl:pl-8">
-      <div class="sticky top-[80px] pt-1 max-h-screen overflow-y-auto">
+      <div class="sticky top-[0px] max-h-screen overflow-y-auto">
         <div class="anchor-box font-sans text-sm">
           <div
           class="anchor-item"
