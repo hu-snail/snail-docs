@@ -10,9 +10,20 @@ body {
     margin-top: -72px;
     content: "";
 }
-.prose {
-    max-width: none;
-}
 .prose p {
     text-align: justify;
 }
+.custom-block {
+    padding-left: 15px;
+    border-left: 5px solid
+}
+.custom-block .custom-block-title {
+    font-weight: 600;
+}
+.custom-block.tip {
+    border-color: #5046e5;
+}
+.custom-block.warning {
+    border-color: #ffc107;
+}
+

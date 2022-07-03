@@ -20,6 +20,9 @@
           prose prose-neutral
           mt-5
           hover:prose-a:text-indigo-400
+          dark:prose-invert
+          prose-img:rounded-xl
+          max-w-none
         "
         v-html="content"
       ></article>

@@ -253,13 +253,13 @@
               <div class="lg:text-center">
                 <h1
                   class="
-                    text-indigo-600
                     mt-2
                     text-6xl
                     leading-2
                     font-extrabold
                     tracking-tight
                     uppercase
+                    bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-pink-500
                   "
                 >
                   Snail Pro Vue
@@ -298,7 +298,7 @@
                       font-medium
                       rounded-md
                       text-white
-                      bg-indigo-600
+                      bg-gradient-to-r from-indigo-500 to-pink-500
                       hover:bg-indigo-700
                       md:py-4 md:text-lg md:px-10
                     "
