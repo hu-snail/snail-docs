@@ -12,7 +12,7 @@
       <component :is="component" />
     </div>
 
-    <div class="preview-container-code" v-if="codeVisible">
+    <div class="prose prose-neutral" v-if="codeVisible">
       <pre class="language-html" v-html="html" />
     </div>
   </div>
