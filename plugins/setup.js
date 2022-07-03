@@ -1,6 +1,3 @@
 import 'vfonts/Inter.css'
 import 'vfonts/FiraCode.css'
 import 'prismjs/themes/prism.css'
-import '@/styles/hu-md.css'
-import '@/styles/index.css'
-import '@/styles/iconfont/iconfont.js'

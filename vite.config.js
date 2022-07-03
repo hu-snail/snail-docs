@@ -24,7 +24,6 @@ export default defineConfig({
     mdPlugin({ 
       mode: [Mode.HTML, Mode.TOC, Mode.VUE],
       markdown: (content) => {
-        console.log('---')
         return createRenderer(content)
       },
       markdownIt: markdownIt({html: true, highlight})

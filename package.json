@@ -8,7 +8,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@icon-park/vue-next": "^1.4.0",
+    "@headlessui/vue": "^1.6.5",
+    "@heroicons/vue": "^1.0.6",
     "axios": "^0.27.2",
     "html-entities": "^2.3.3",
     "marked": "^4.0.16",
@@ -19,10 +20,12 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
+    "autoprefixer": "^10.4.7",
     "escape-html": "^1.0.3",
     "markdown-it": "^13.0.1",
     "markdown-it-container": "^3.0.0",
-    "sass": "^1.52.1",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.1.4",
     "vite": "^2.9.9",
     "vite-plugin-markdown": "^2.0.2"
   }
