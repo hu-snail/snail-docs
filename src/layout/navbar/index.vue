@@ -1,6 +1,6 @@
 <template>
      <Disclosure as="nav" class="bg-white sticky top-0 z-30 h-[72px] backdrop-blur backdrop-filter  firefox:bg-opacity-90" v-slot="{ open }">
-      <div class="px-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16">
           <div class="flex items-center">
             <div class="flex-shrink-0">
