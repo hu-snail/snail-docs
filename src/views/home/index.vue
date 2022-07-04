@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-full h-screen  dark:bg-slate-800">
+  <div class="min-h-full h-screen relative  dark:bg-slate-800">
    <HeaderCompontent />
     <main>
       <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 ">
@@ -34,7 +34,7 @@
                     sm:text-4xl
                   "
                 >
-                 Quickly generate your documents
+                  快速生成您的文档
                 </p>
                 <p class="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-300 lg:mx-auto">
                   基于Vue3 + Vite2 + Element-plus + Pinia +
@@ -94,13 +94,13 @@
                 <dl
                   class="
                     space-y-10
-                    md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10
+                    md:space-y-0 md:grid sm:grid-cols-2 xl:grid-cols-4 md:gap-x-8 md:gap-y-10
                   "
                 >
                   <div
                     v-for="feature in features"
                     :key="feature.name"
-                    class="relative"
+                    class="relative bg-gray-100 px-4 py-4 rounded-md"
                   >
                     <dt>
                       <div
@@ -125,7 +125,7 @@
                       <p
                         class="
                           ml-16
-                          text-lg
+                          text-base
                           leading-6
                           font-medium
                           dark:text-gray-300
@@ -135,7 +135,7 @@
                         {{ feature.name }}
                       </p>
                     </dt>
-                    <dd class="mt-2 ml-16 text-base text-gray-500 dark:text-gray-400">
+                    <dd class="mt-2 ml-16 text-sm text-gray-500 dark:text-gray-400">
                       {{ feature.description }}
                     </dd>
                   </div>
@@ -146,6 +146,10 @@
         </div>
       </div>
     </main>
+    <footer class="border-t text-center fixed w-full py-4 bottom-0">
+      <p class="text-base text-gray-500">Released under the MIT License.</p>
+      <p class="text-base text-gray-500">Copyright © 2022-present hu-snail</p>
+    </footer>
   </div>
 </template>
 
@@ -160,27 +164,27 @@ import {
 } from "@heroicons/vue/outline";
 const features = [
   {
-    name: "Competitive exchange rates",
+    name: "国际化",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "默认支持简体中文,英文",
     icon: GlobeAltIcon
   },
   {
-    name: "No hidden fees",
+    name: "Vue3语法支持",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "最新vue3版本",
     icon: ScaleIcon
   },
   {
-    name: "Transfers are instant",
+    name: "响应式",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "支持PC/移动端展示",
     icon: LightningBoltIcon
   },
   {
-    name: "Mobile notifications",
+    name: "自定义",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "支持自定义模式",
     icon: AnnotationIcon
   }
 ];

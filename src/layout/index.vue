@@ -1,10 +1,12 @@
 <template>
-  <div class="font-sans antialiased">
+  <div class="font-sans antialiased ">
       <HeaderCompontent />
-      <div class="bg-white  dark:bg-slate-800">
-        <div class="max-w-7xl mx-auto flex px-4 sm:px-6 lg:px-8 ">
+      <div class="md:flex md:justify-center">
+      <div class="bg-white dark:bg-slate-800 max-w-8xl  mx-auto ">
+        <div class="flex px-4 sm:px-6 md:px-8 ">
           <SideBar/>
           <Main />
+        </div>
         </div>
     </div>
   </div>

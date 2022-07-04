@@ -15,7 +15,7 @@
     "marked": "^4.0.16",
     "prismjs": "^1.28.0",
     "vfonts": "^0.0.3",
-    "vue": "^3.2.25",
+    "vue": "^3.2.37",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {

@@ -3,7 +3,8 @@
     as="nav"
     class="
       bg-white
-      dark:bg-slate-800 border-slate-50/[0.06]
+      dark:bg-slate-800
+      dark:border-slate-50/[0.06]
       sticky
       top-0
       border-b
@@ -14,7 +15,7 @@
     "
     v-slot="{ open }"
   >
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <div class="flex items-center">
           <div class="flex-shrink-0">
@@ -44,8 +45,8 @@
             <SwitchGroup>
               <div class="flex items-center">
                 <Switch
-                  v-model="enabled"
-                  :class="enabled ? 'bg-gray-600' : 'bg-gray-200'"
+                  v-model="state.enabled"
+                  :class="state.enabled ? 'bg-gray-600' : 'bg-gray-200'"
                   class="
                     relative
                     inline-flex
@@ -56,11 +57,12 @@
                     transition-colors
                     focus:outline-none
                   "
+                  @change="handleChange"
                 >
                   <SunIcon
-                    v-if="!enabled"
-                    :class="enabled ? 'translate-x-6' : 'translate-x-1'"
+                    v-if="!state.enabled"
                     class="
+                      translate-x-1
                       nline-block
                       h-4
                       w-4
@@ -72,8 +74,8 @@
                   />
                   <MoonIcon
                     v-else
-                    :class="enabled ? 'translate-x-6' : 'translate-x-1'"
                     class="
+                      translate-x-6
                       flex
                       justify-center
                       rounded-full
@@ -251,7 +253,7 @@
 </template>
 
 <script setup>
-import { ref, onBeforeMount } from "vue";
+import { ref, onBeforeMount, watch, reactive } from "vue";
 import {
   Disclosure,
   DisclosureButton,
@@ -282,7 +284,9 @@ const user = {
   imageUrl:
     "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
 };
-const enabled = ref(false);
+const state = reactive({
+  enabled: false
+})
 const navigation = [
   { name: "Dashboard", href: "#", current: true },
   { name: "Team", href: "#", current: false },
@@ -295,9 +299,16 @@ const userNavigation = [
   { name: "Settings", href: "#" },
   { name: "Sign out", href: "#" }
 ];
+watch(() => state.enabled, (val) => {
+  console.log(val, '---')
+})
 onBeforeMount(() => {
   
-    document.documentElement.classList.add('dark')
+    // document.documentElement.classList.add('dark')
 
 })
+
+const handleChange = (val) => {
+  console.log(val)
+}
 </script>
