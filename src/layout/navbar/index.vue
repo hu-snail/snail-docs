@@ -3,8 +3,10 @@
     as="nav"
     class="
       bg-white
+      dark:bg-slate-800 border-slate-50/[0.06]
       sticky
       top-0
+      border-b
       z-30
       h-[72px]
       backdrop-blur backdrop-filter
@@ -27,6 +29,7 @@
                   v-for="item in navigation"
                   :key="item.name"
                   :href="item.href"
+                  class="dark:text-gray-300"
                   :class="[
                     item.current
                       ? 'text-indigo-600'
@@ -95,13 +98,10 @@
                     flex
                     items-center
                     text-sm
-                    focus:outline-none
-                    focus:ring-2
-                    focus:ring-offset-2
-                    focus:ring-white
+                    text-gray-500
+                    dark:text-gray-300
                   "
                 >
-                  <span class="sr-only">Open user menu</span>
                   <TranslateIcon class="h-6 w-6" />
                 </MenuButton>
               </div>
@@ -251,7 +251,7 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onBeforeMount } from "vue";
 import {
   Disclosure,
   DisclosureButton,
@@ -295,4 +295,9 @@ const userNavigation = [
   { name: "Settings", href: "#" },
   { name: "Sign out", href: "#" }
 ];
+onBeforeMount(() => {
+  
+    document.documentElement.classList.add('dark')
+
+})
 </script>

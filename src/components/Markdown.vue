@@ -1,11 +1,11 @@
 <template>
   <div class="flex min-w-0 flex-1 mt-10" ref="wrapper">
     <div
-      class="order-1 mx-8 min-w-0 mb-10 max-w-[800px] flex-1"
+      class="order-1 lg:mx-8 xl:mx-10 md:mx-8 sm:mx-0 min-w-0 mb-10 max-w-[800px] flex-1"
       @scroll="handleScroll"
     >
       <div class="md-head" ref="mdHead">
-        <div v-if="attributes && attributes.coverImg" class="h-80">
+        <div v-if="attributes && attributes.coverImg" class="xl:h-80 md:h-80 lg:h-80 sm:h-32">
           <img
             ref="img"
             :src="attributes.coverImg"
@@ -31,7 +31,7 @@
         <div class="anchor-box font-sans text-sm">
           <template v-for="(item, index) in toc" :key="index">
             <div v-if="item.level <= 2" class="anchor-item py-1" :class="getClassName(item, index)">
-              <a class="anchor-item-title" :href="`#${decode(item.content)}`">
+              <a class="anchor-item-title dark:text-gray-300" :href="`#${decode(item.content)}`">
                 <span v-html="decode(item.content)"></span>
               </a>
             </div>

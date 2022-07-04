@@ -1,9 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-body {
-    /* overflow: hidden; */
-}
 .md-title:before {
     display: block;
     height: 72px;
@@ -12,6 +6,26 @@ body {
 }
 .prose p {
     text-align: justify;
+}
+.prose code:not([class='code-card']) {
+    color: #5046e5;
+    background-color: #f5f5f5;
+    padding: 2px 5px;
+    border-radius: 2px;
+    margin: 0 4px;
+}
+.dark .prose code:not([class='code-card']) {
+    background-color: #5046e5;
+    color: #fff;
+}
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string{
+    background-color: transparent;
+}
+.prose code:not([class='code-card'])::before {
+    content: "";
+}
+.prose code:not([class='code-card'])::after {
+    content: "";
 }
 .custom-block {
     padding-left: 15px;

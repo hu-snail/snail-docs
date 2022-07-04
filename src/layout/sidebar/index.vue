@@ -1,9 +1,9 @@
 <template>
-  <div class="hidden w-64 shrink-0 lg:block lg:pr-8">
-    <div class="sticky top-[72px]">
+  <div class="hidden w-64 shrink-0 lg:block lg:pr-8 border-r dark:border-slate-50/[0.06] mr-8">
+    <div class="sticky top-[112px]">
       <div class="mb-6">
         <div class="relative">
-          <div class="relative bg-white dark:bg-gray-800">
+          <div class="relative">
             <div class="flex">
               <div class="w-64 max-h-screen overflow-x-hidden overflow-y-auto">
                 <nav>
@@ -16,7 +16,7 @@
                         border-b-2
                         pb-2
                         border-gray-100
-                        mb-4
+                        mb-2
                         text-md
                         font-normal
                       "
